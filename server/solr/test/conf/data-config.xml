@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dataConfig>
+	<!-- DB 설정 -->
+    <dataSource type="JdbcDataSource"
+                  driver="com.mysql.jdbc.Driver"
+                  url="jdbc:mysql://localhost/covid"
+                  user="root"
+                  password="1q2w3e4r5t"/>
+
+    <document name="sample">
+        <entity name="COVID_DATA" query="select idx,addr,date,company,reporter,cate1,cate2,cate3,accident1,accident2,accident3,ner_person,ner_company,keyword,specificity,link from covid_data">
+            <field column="idx" name="id"/>
+			<field column="addr" name="addr"/>
+			<field column="date" name="date"/>
+			<field column="company" name="company"/>
+			<field column="reporter" name="reporter"/>
+			<field column="cate1" name="cate1"/>
+			<field column="cate2" name="cate2"/>
+			<field column="cate3" name="cate3"/>
+			<field column="accident1" name="accident1"/>
+			<field column="accident2" name="accident2"/>
+			<field column="accident3" name="accident3"/>
+			<field column="ner_person" name="ner_person"/>
+			<field column="ner_company" name="ner_company"/>
+			<field column="keyword" name="keyword"/>
+			<field column="specificity" name="specificity"/>
+			<field column="link" name="link"/>
+        </entity>
+    </document>
+</dataConfig>
